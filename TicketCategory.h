@@ -10,9 +10,10 @@ class TicketCategory : public TicketSystem
 public:
     TicketCategory(std::string name);
     std::string getName();
-    void setName();
+    void setName(std::string name);
     void add(TicketSystem *item);
     void print();
+    ~TicketCategory();
 
 private:
     std::string name;

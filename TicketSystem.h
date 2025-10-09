@@ -4,8 +4,8 @@
 class TicketSystem
 {
 public:
-    void print();
-    void add(TicketSystem *item);
+    virtual void print() = 0;
+    virtual void add(TicketSystem *item) = 0;
     TicketSystem() = default;
     virtual ~TicketSystem() = default;
 };

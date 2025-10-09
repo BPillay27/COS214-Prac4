@@ -9,6 +9,7 @@ public:
     GeneralCommand();
     void execute(std::string id, std::string info);
     std::string getType();
+    ~GeneralCommand() = default;
 };
 
 #endif

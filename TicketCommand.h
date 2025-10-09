@@ -6,9 +6,10 @@
 class TicketCommand
 {
 public:
-    TicketCommand();
+    TicketCommand() = default;
     virtual void execute(std::string id, std::string info) = 0;
     virtual std::string getType() = 0;
+    virtual ~TicketCommand() = default;
 };
 
 #endif

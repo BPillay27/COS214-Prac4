@@ -12,6 +12,7 @@ public:
     void setInfo(std::string info);
     TicketInformation(std::string id, std::string info);
     TicketInformation();
+    ~TicketInformation() = default;
 
 private:
     std::string id;

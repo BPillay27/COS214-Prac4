@@ -8,9 +8,7 @@ class Support
 public:
     Support();
     void setNext(Support *next);
-    
-protected:
-    virtual void support(TicketLeaf *ticket)=0;
+    virtual void support(TicketLeaf *ticket) = 0;
 
 private:
     Support *next;

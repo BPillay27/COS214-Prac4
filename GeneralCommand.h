@@ -1,5 +1,5 @@
-#ifndef TECHCOMMAND_H
-#define TECHCOMMAND_H
+#ifndef GENERALCOMMAND_H
+#define GENERALCOMMAND_H
 
 #include "TicketCommand.h"
 

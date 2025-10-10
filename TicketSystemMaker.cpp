@@ -41,6 +41,11 @@ void TicketSystemMaker::addFinanceTicket(std::string id, std::string info)
         root = temp;
         return;
     }
+
+    if (currentCategory == NULL)
+    {
+        root->add(temp);
+    }
     currentCategory->add(temp);
 }
 
@@ -54,6 +59,11 @@ void TicketSystemMaker::addTechTicket(std::string id, std::string info)
         root = temp;
         return;
     }
+
+    if (currentCategory == NULL)
+    {
+        root->add(temp);
+    }
     currentCategory->add(temp);
 }
 
@@ -66,6 +76,11 @@ void TicketSystemMaker::addGeneralTicket(std::string id, std::string info)
     {
         root = temp;
         return;
+    }
+
+    if (currentCategory == NULL)
+    {
+        root->add(temp);
     }
     currentCategory->add(temp);
 }

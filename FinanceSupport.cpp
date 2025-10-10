@@ -25,7 +25,7 @@ void FinanceSupport::support(TicketLeaf *ticket)
     {
         std::cout << "Finance Support is passing on the ticket...\n";
         TechSupport *temp = new TechSupport();
-        setNext(temp);
+        this->setNext(temp);
         temp->support(ticket);
     }
 }

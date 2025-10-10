@@ -93,5 +93,8 @@ int main()
 
     std::cout<<"\n=============================================================================================================\nFreeing dynamic memory...\n";
     delete _ticket1;
+    delete _techCommand;
+    delete _finCommand;
+    delete _genCommand;
     std::cout<<"TESTS CONCLUDED!\n";
 }

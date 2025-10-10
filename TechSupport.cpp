@@ -9,7 +9,11 @@ void TechSupport::support(TicketLeaf *ticket)
     if (ticket == NULL)
         return;
 
-    std::string type = ticket->getCmd()->getType();
+    std::string type = "";
+    if (ticket->getCmd() != NULL)
+    {
+        type = ticket->getCmd()->getType();
+    }
 
     if (type == "Tech")
     {

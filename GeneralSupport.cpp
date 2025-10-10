@@ -8,7 +8,11 @@ void GeneralSupport::support(TicketLeaf *ticket)
     if (ticket == NULL)
         return;
 
-    std::string type = ticket->getCmd()->getType();
+    std::string type = "";
+    if (ticket->getCmd() != NULL)
+    {
+        ticket->getCmd()->getType();
+    }
 
     if (type == "General")
     {

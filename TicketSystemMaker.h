@@ -12,6 +12,8 @@ public:
     void addTechTicket(std::string id, std::string info);
     void addGeneralTicket(std::string id, std::string info);
     TicketSystem *getTicketSystem();
+    TicketSystemMaker();
+    ~TicketSystemMaker();
 
 private:
     TicketSystem *root;

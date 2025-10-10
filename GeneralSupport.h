@@ -1,7 +1,6 @@
-#ifndef TECHSUPPORT_H
-#define TECHSUPPORT_H
+#ifndef GENERALSUPPORT_H
+#define GENERALSUPPORT_H
 
-#include "TicketLeaf.h"
 #include "Support.h"
 
 class GeneralSupport : public Support

@@ -6,11 +6,13 @@
 class SystemMaker
 {
 public:
-    void reset();
-    void addCategory(std::string name);
-    void addFinanceTicket(std::string id, std::string info);
-    void addTechTicket(std::string id, std::string info);
-    void addGeneral(std::string id, std::string info);
+    virtual void reset()=0;
+    virtual void addCategory(std::string name)=0;
+    virtual void addFinanceTicket(std::string id, std::string info)=0;
+    virtual void addTechTicket(std::string id, std::string info)=0;
+    virtual void addGeneral(std::string id, std::string info)=0;
+    SystemMaker() = default;
+    virtual ~SystemMaker() = default;
 };
 
 #endif;

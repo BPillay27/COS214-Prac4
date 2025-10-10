@@ -26,6 +26,16 @@ TicketCommand *TicketLeaf::getCmd()
 
 void TicketLeaf::setCmd(TicketCommand *cmd)
 {
+    if (cmd == NULL)
+    {
+        return;
+    }
+
+    if (this->cmd != NULL)
+    {
+        delete this->cmd;
+        this->cmd = NULL;
+    }
     this->cmd = cmd;
 }
 
@@ -43,6 +53,6 @@ TicketLeaf::~TicketLeaf()
     if (cmd != NULL)
     {
         delete cmd;
-        cmd=NULL;
+        cmd = NULL;
     }
 }

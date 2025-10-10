@@ -13,7 +13,7 @@ void FinanceSupport::support(TicketLeaf *ticket)
     std::string type = "";
     if (ticket->getCmd() != NULL)
     {
-        ticket->getCmd()->getType();
+        type = ticket->getCmd()->getType();
     }
 
     if (type == "Finance")

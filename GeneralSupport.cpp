@@ -11,7 +11,7 @@ void GeneralSupport::support(TicketLeaf *ticket)
     std::string type = "";
     if (ticket->getCmd() != NULL)
     {
-        ticket->getCmd()->getType();
+        type = ticket->getCmd()->getType();
     }
 
     if (type == "General")
@@ -25,4 +25,3 @@ void GeneralSupport::support(TicketLeaf *ticket)
         std::cout << "Ticket Unhandled\n";
     }
 }
-

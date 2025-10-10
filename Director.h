@@ -12,7 +12,7 @@ class Director
 {
 public:
     Director(SystemMaker *m);
-    ~Director() = default;
+    ~Director();
     TicketSystem *construct();
     std::vector<TicketInformation *> getFinanceTickets();
     void setFinanceTickets(std::vector<TicketInformation *> financeTickets);

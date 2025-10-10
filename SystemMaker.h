@@ -15,4 +15,4 @@ public:
     virtual ~SystemMaker() = default;
 };
 
-#endif;
+#endif

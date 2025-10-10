@@ -2,6 +2,7 @@
 #include "SystemMaker.h"
 #include "TicketSystem.h"
 #include "Director.h"
+#include "TicketSystemMaker.h"
 
 Director::Director(SystemMaker *m)
 {
@@ -15,37 +16,58 @@ Director::~Director()
         delete maker;
         maker = NULL;
     }
+
+    for (TicketInformation *t : financeTickets)
+    {
+        delete t;
+    }
+
+    for (TicketInformation *t : generalTickets)
+    {
+        delete t;
+    }
+
+    for (TicketInformation *t : techTickets)
+    {
+        delete t;
+    }
 }
 
 TicketSystem *Director::construct()
 {
-    maker->reset();
+    TicketSystemMaker *m = new TicketSystemMaker();
 
     if (!financeTickets.empty())
     {
-        maker->addCategory("Finance");
+        m->addCategory("Finance");
 
         for (TicketInformation *t : financeTickets)
         {
-            maker->addFinanceTicket(t->getId(), t->getInfo());
+            m->addFinanceTicket(t->getId(), t->getInfo());
         }
     }
 
-    if(!techTickets.empty()){
-        maker->addCategory("Tech");
+    if (!techTickets.empty())
+    {
+        m->addCategory("Tech");
 
-        for(TicketInformation *t :techTickets){
-            maker->addTechTicket(t->getId(), t->getInfo());
+        for (TicketInformation *t : techTickets)
+        {
+            m->addTechTicket(t->getId(), t->getInfo());
         }
     }
 
-    if(!generalTickets.empty()){
-        maker->addCategory("General");
+    if (!generalTickets.empty())
+    {
+        m->addCategory("General");
 
-        for(TicketInformation *t :techTickets){
-            maker->addGeneralTicket(t->getId(), t->getInfo());
+        for (TicketInformation *t : techTickets)
+        {
+            m->addGeneralTicket(t->getId(), t->getInfo());
         }
     }
+
+    return m->getTicketSystem();
 }
 
 std::vector<TicketInformation *> Director::getFinanceTickets()
@@ -55,7 +77,7 @@ std::vector<TicketInformation *> Director::getFinanceTickets()
 
 void Director::setFinanceTickets(std::vector<TicketInformation *> financeTickets)
 {
-    this->financeTickets=financeTickets;
+    this->financeTickets = financeTickets;
 }
 
 std::vector<TicketInformation *> Director::getTechTickets()
@@ -65,7 +87,7 @@ std::vector<TicketInformation *> Director::getTechTickets()
 
 void Director::setTechTickets(std::vector<TicketInformation *> techTickets)
 {
-    this->techTickets=techTickets;
+    this->techTickets = techTickets;
 }
 
 std::vector<TicketInformation *> Director::getGeneralTickets()
@@ -75,5 +97,5 @@ std::vector<TicketInformation *> Director::getGeneralTickets()
 
 void Director::setGeneralTickets(std::vector<TicketInformation *> generalTickets)
 {
-    this->generalTickets=generalTickets;
+    this->generalTickets = generalTickets;
 }

@@ -6,7 +6,7 @@ class TicketLeaf;
 class Support
 {
 public:
-    Support();
+    Support()=default;
     void setNext(Support *next);
     virtual void support(TicketLeaf *ticket) = 0;
     virtual ~Support();

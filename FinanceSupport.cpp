@@ -29,7 +29,3 @@ void FinanceSupport::support(TicketLeaf *ticket)
         temp->support(ticket);
     }
 }
-
-FinanceSupport::FinanceSupport() : Support()
-{
-}

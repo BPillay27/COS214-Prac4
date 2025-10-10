@@ -7,7 +7,7 @@ class FinanceSupport : public Support
 {
 public:
     void support(TicketLeaf *ticket);
-    FinanceSupport();
+    FinanceSupport() = default;
 };
 
 #endif

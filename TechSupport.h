@@ -7,7 +7,7 @@ class TechSupport : public Support
 {
 public:
     void support(TicketLeaf *ticket);
-    TechSupport();
+    TechSupport() = default;
 };
 
 #endif

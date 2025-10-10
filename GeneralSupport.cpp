@@ -26,6 +26,3 @@ void GeneralSupport::support(TicketLeaf *ticket)
     }
 }
 
-GeneralSupport::GeneralSupport() : Support()
-{
-}

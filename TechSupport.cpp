@@ -29,6 +29,3 @@ void TechSupport::support(TicketLeaf *ticket)
     }
 }
 
-TechSupport::TechSupport() : Support()
-{
-}
